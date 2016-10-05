@@ -24,8 +24,9 @@ script:
 
 deploy:
   -
+    skip_cleanup: true
     provider: script
-    script: .travis/deploy.sh
+    script: /bin/sh .travis/deploy.sh
     on:
       branch: dgo-travis
 #      tags: true
